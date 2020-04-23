@@ -6,6 +6,6 @@ smtp.connect('localhost', 9025, function (mail) {
     mail.from('substack@example.com');
     mail.to('root@example.com');
     mail.data();
-    fs.createReadStream('/etc/issue').pipe(mail.message());
+    fs.createReadStream('etc/issue').pipe(mail.message());
     mail.quit();
 });
